@@ -17,6 +17,11 @@ public class ArraysCompareTest {
 
         Arrays.sort(numbers);
         assertArrayEquals(expected, numbers);
+    }
 
+    @Test(expected = NullPointerException.class)
+    public void testArraysSort_NullArray() {
+        int[] numbers = null;
+        Arrays.sort(numbers);
     }
 }
